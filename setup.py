@@ -16,7 +16,7 @@ except:
 setup(
     name='django-googlesearch',
     version='0.1',
-    description='To be done.',
+    description='Django application wrapping Google\'s AJAX search API.',
     long_description=README,
     install_requires=REQUIREMENTS,
     author='Mathijs de Bruin',

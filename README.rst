@@ -2,4 +2,4 @@
 django-googlesearch
 ===================
 
-To be done.
+Django application wrapping Google's AJAX search API.
