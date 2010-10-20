@@ -14,14 +14,14 @@ except:
     REQUIREMENTS = None
 
 setup(
-    name='django-simplesite',
+    name='django-googlesearch',
     version='0.1',
-    description='A simple pseudo-static site app with menu, submenu and pages.',
+    description='To be done.',
     long_description=README,
     install_requires=REQUIREMENTS,
     author='Mathijs de Bruin',
     author_email='mathijs@mathijsfietst.nl',
-    url='http://github.com/dokterbob/django-simplesite',
+    url='http://github.com/dokterbob/django-googlesearch',
     packages = find_packages(),
     classifiers=[
         'Development Status :: 4 - Beta',

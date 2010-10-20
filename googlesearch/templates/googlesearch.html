@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<!-- form begin -->
+<form action="/googlesearch/" method="post">
+	<input type="text" id="q" name="q" value="{{ q|escape }}" />
+	<p>
+	<input type="submit" class="submit" id="ok" name="ok" value="Search" />
+	</p>
+</form>
+<!-- form end -->
+{% endblock %}
+
+{% block content2 %}
+
+    <div>
+        <h3>Search results</h3>				
+        {% if results %}
+        <p>
+        {{ start|add:"1" }}-{{ end }} of {{ estimatedResultCount }} results
+        {% if start %}<a href="?q={{ q|urlencode }}&start={{ prev }}">&lt; Previous</a> {% endif %}	
+        {% if next %} | <a href="?q={{ q|urlencode }}&start={{ next }}">Next &gt;</a>{% endif %}
+        </p>
+        {% else %}
+        {% if q %}
+        <p>
+        Er zijn geen resultaten.
+        </p>
+        {% endif %}
+        <!-- result end -->
+        {% endif %}    
+    </div>
+	
+	{% if results %}
+    {% for result in results %}
+	<!-- result begin -->
+	<div class="result">
+		<h4><a href="{{ result.url }}">{{ result.title }}</a></h4>				
+        <p>{{ result.content }}<br />
+        {{ result.url }}</p>
+	</div>
+	<!-- result end -->
+    {% endfor %}
+        {% if moreResultsUrl %}
+            <a href="{{ moreResultsUrl }}">More results by Gooogle :)</a>
+        {% endif %}
+   	{% endif %}
+	
+{% endblock %}
+
+
+
+
+

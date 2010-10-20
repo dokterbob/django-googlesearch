@@ -1,5 +1,5 @@
-=================
-django-simplesite
-=================
+===================
+django-googlesearch
+===================
 
-A simple pseudo-static site app with menu, submenu and pages.
+To be done.
